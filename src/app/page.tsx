@@ -1,5 +1,29 @@
+import SignInButton from "@/components/SignInButton";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-export default function Home() {
-  return <Button>Hi there!</Button>;
+export default async function Home() {
+  return (
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <Card className="md:w-[500px] w-[300px]">
+        <CardHeader>
+          <CardTitle>Welcome to Quizy!</CardTitle>
+          <CardDescription>
+            Quizy is a place where you can attend quizzes to evaluate your
+            knowledge and also share with your friends.
+          </CardDescription>
+        </CardHeader>
+
+        <CardContent>
+          <SignInButton text="Sign in with Google!" />
+        </CardContent>
+      </Card>
+    </div>
+  );
 }
